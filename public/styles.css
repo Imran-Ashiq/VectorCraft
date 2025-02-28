@@ -1,0 +1,154 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f7f9fc;
+    margin: 0;
+    padding: 0;
+    color: #333;
+  }
+  .container {
+    max-width: 700px;
+    margin: 50px auto;
+    text-align: center;
+    background: linear-gradient(135deg, #ffffff, #e8ecef);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+  h1 {
+    color: #2c3e50;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  p {
+    color: #7f8c8d;
+    margin-bottom: 20px;
+  }
+  input[type="file"] {
+    margin: 20px 0;
+    padding: 10px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  }
+  button {
+    background-color: #3498db;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  button:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+  }
+  button i {
+    margin-right: 8px;
+  }
+  .status {
+    margin-top: 20px;
+    color: #666;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  .spinner {
+    width: 20px;
+    height: 20px;
+    border: 3px solid #ddd;
+    border-top: 3px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+  .controls {
+    margin: 15px 0;
+  }
+  .controls label {
+    display: block;
+    margin-bottom: 8px;
+    color: #2c3e50;
+    font-weight: 600;
+  }
+  .controls input[type="range"],
+  .controls select,
+  .controls input[type="number"] {
+    width: 80%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background: #fff;
+  }
+  .controls span {
+    margin-left: 10px;
+    font-weight: bold;
+    color: #3498db;
+  }
+  .feedback {
+    margin-top: 15px;
+    color: #7f8c8d;
+    font-style: italic;
+  }
+  .preview-container {
+    margin-top: 25px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #fff;
+  }
+  #svgPreview {
+    width: 400px;
+    height: 400px;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ccc;
+    overflow: hidden;
+    animation: fadeIn 0.5s ease-in;
+  }
+  #svgPreview svg {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  #thumbnails {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+  }
+  .thumbnail {
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    padding: 5px;
+    background: white;
+    transition: border-color 0.3s, transform 0.2s;
+    animation: fadeIn 0.5s ease-in;
+  }
+  .thumbnail svg {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  .thumbnail:hover, .thumbnail.active {
+    border-color: #3498db;
+    transform: scale(1.05);
+  }
+  #downloadBtn {
+    margin-top: 15px;
+  }
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }

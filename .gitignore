@@ -1,0 +1,28 @@
+# Node.js dependencies
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Temporary files
+*.log
+*.tmp
+*.temp
+
+# Build output
+dist/
+build/
+
+# Environment variables
+.env
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Project-specific temp folders
+input/
+output/
+
+# Editor files
+.vscode/
+*.swp

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VectorCraft - PNG to SVG Converter</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>VectorCraft</h1>
+    <p>Convert your PNG images to scalable SVG graphics</p>
+    <form id="uploadForm" enctype="multipart/form-data">
+      <input type="file" id="imageInput" name="images" accept=".png" multiple required>
+      <div class="controls">
+        <label>Preset Profile:</label>
+        <select name="preset">
+          <option value="custom">Custom</option>
+          <option value="crisp">Crisp Logo</option>
+          <option value="soft">Soft Illustration</option>
+          <option value="minimal">Minimalist Icon</option>
+        </select>
+      </div>
+      <div class="controls">
+        <label>Edge Smoothness (0-2):</label>
+        <input type="range" name="smoothness" min="0" max="2" step="0.1" value="0.8">
+        <span id="smoothnessValue">0.8</span>
+      </div>
+      <div class="controls">
+        <label>Noise Reduction (1-10):</label>
+        <input type="range" name="noise" min="1" max="10" step="1" value="2">
+        <span id="noiseValue">2</span>
+      </div>
+      <div class="controls">
+        <label>Transition Softness (0-1):</label>
+        <input type="range" name="blur" min="0" max="1" step="0.1" value="0.5">
+        <span id="blurValue">0.5</span>
+      </div>
+      <div class="controls">
+        <label>Width (px, optional):</label>
+        <input type="number" name="width" min="1" placeholder="Auto">
+      </div>
+      <div class="controls">
+        <label>Height (px, optional):</label>
+        <input type="number" name="height" min="1" placeholder="Auto">
+      </div>
+      <div id="settingsFeedback" class="feedback"></div>
+      <button type="submit"><i class="fas fa-arrow-up"></i> Convert & Download</button>
+    </form>
+    <div id="status" class="status">
+      <span id="statusText"></span>
+      <div id="spinner" class="spinner" style="display: none;"></div>
+    </div>
+    <div id="preview" class="preview-container">
+      <h3>Preview</h3>
+      <div id="svgPreview"></div>
+      <div id="thumbnails" class="thumbnails"></div>
+      <button id="downloadBtn" style="display: none;"><i class="fas fa-download"></i> Download</button>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
